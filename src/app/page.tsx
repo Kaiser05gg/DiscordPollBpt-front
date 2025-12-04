@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import { Icons } from "@/features/poll/components/Icons";
 
