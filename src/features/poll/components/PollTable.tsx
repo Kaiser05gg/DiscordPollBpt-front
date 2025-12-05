@@ -27,7 +27,7 @@ export function PollTable({ polls }: { polls: PollDetailResult[] }) {
             poll.top_option ??
             poll.poll?.top_option ??
             poll.cron?.top_option ??
-            "（まだ集計なし）";
+            "無投票";
 
           return (
             <tr key={i} className="border-b border-gray-700">
