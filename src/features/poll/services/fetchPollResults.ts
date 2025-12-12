@@ -1,6 +1,6 @@
-import { PollResult } from "../types/PollResult";
+import { PollDetailResult } from "../types/PollResult";
 
-export const fetchPollResults = async (): Promise<PollResult[]> => {
+export const fetchPollResults = async (): Promise<PollDetailResult[]> => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/poll_results`
   );
