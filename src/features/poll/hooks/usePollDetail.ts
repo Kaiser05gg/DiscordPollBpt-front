@@ -5,7 +5,7 @@ import { fetchPollDetail } from "../services/fetchPollDetail";
 import type { PollDetail } from "../types/PollResult";
 
 export function usePollDetail(id: string) {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<PollDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -17,8 +17,13 @@ export function usePollDetail(id: string) {
         setLoading(true);
         const res = await fetchPollDetail(id);
         setData(res);
-      } catch (err: any) {
-        setError(err.message ?? "Failed to load poll");
+      } catch (err: unknown) {
+        // ← any → unknown
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("Failed to load poll");
+        }
       } finally {
         setLoading(false);
       }
