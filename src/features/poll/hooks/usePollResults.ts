@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import { PollResult } from "../types/PollResult";
+import { PollDetailResult } from "../types/PollResult";
 import { fetchPollResults } from "../services/fetchPollResults";
 
 export const usePollResults = () => {
-  const [polls, setPolls] = useState<PollResult[]>([]);
+  const [polls, setPolls] = useState<PollDetailResult[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
