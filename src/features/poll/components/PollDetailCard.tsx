@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { PollDetail } from "@/features/poll/types/PollResult";
 import { convertTimestamp } from "@/lib/utils/convertTimestamp";
 
@@ -48,12 +49,12 @@ export function PollDetailCard({ poll }: Props) {
 
       {/* 戻るボタン */}
       <div className="mt-8">
-        <a
+        <Link
           href="/polls"
           className="inline-block px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded shadow-sm"
         >
           ← 一覧へ戻る
-        </a>
+        </Link>
       </div>
     </div>
   );
