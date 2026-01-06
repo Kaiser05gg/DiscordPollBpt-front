@@ -10,14 +10,43 @@ export function ReferencesSection() {
           <ExternalLink href="https://chat.openai.com/">ChatGPT</ExternalLink>
         </li>
         <li>
-          <ExternalLink href="https://discord.js.org/">
-            discord.js 公式ドキュメント
-          </ExternalLink>
+          <ExternalLink href="https://nextjs.org/">Next.js</ExternalLink>
+          公式ドキュメント
         </li>
         <li>
-          <ExternalLink href="https://nextjs.org/docs">
-            Next.js 公式ドキュメント
+          <ExternalLink href="https://ja.react.dev/">React</ExternalLink>
+        </li>
+        <li>
+          <ExternalLink href="https://tailwindcss.com/">
+            Tailwind CSS
           </ExternalLink>
+          公式ドキュメント
+        </li>
+        <li>
+          <ExternalLink href="https://react-icons.github.io/react-icons/">
+            react-icons
+          </ExternalLink>
+          公式ドキュメント
+        </li>
+        <li>
+          <ExternalLink href="https://nodejs.org/ja">Node.js</ExternalLink>
+          公式ドキュメント
+        </li>
+        <li>
+          <ExternalLink href="https://discord.js.org/">Express</ExternalLink>
+          公式ドキュメント
+        </li>
+        <li>
+          <ExternalLink href="https://discord.js.org/">discord.js</ExternalLink>
+          公式ドキュメント
+        </li>
+        <li>
+          <ExternalLink href="https://nodecron.com/">node-cron</ExternalLink>
+          公式ドキュメント
+        </li>
+        <li>
+          <ExternalLink href="https://www.dotenv.org/">dotenv</ExternalLink>
+          公式ドキュメント
         </li>
       </ul>
     </section>
