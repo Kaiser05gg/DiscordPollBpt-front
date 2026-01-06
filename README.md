@@ -19,3 +19,23 @@ WebUIとして分かりやすく表示するフロントエンドです。
 なんちゃって保守性を意識した設計を行っています。
 
 ---
+
+## 使用技術
+
+Next.js
+React
+TypeScript
+Tailwind CSS
+react-icons
+Node.js
+TypeScript
+Express
+discord.js
+node-cron
+dotenv
+uuid
+Database
+Firestore（Firebase）
+Infrastructure
+Koyeb
+GitHub
