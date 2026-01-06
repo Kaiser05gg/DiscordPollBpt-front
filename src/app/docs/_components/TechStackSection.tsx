@@ -32,12 +32,18 @@ export function TechStackSection() {
           <ExternalLink href="https://nodejs.org/ja">Node.js</ExternalLink>
         </li>
         <li>TypeScript</li>
-        <li>Express</li>
+        <li>
+          <ExternalLink href="https://discord.js.org/">Express</ExternalLink>
+        </li>
         <li>
           <ExternalLink href="https://discord.js.org/">discord.js</ExternalLink>
         </li>
-        <li>node-cron</li>
-        <li>dotenv</li>
+        <li>
+          <ExternalLink href="https://nodecron.com/">node-cron</ExternalLink>
+        </li>
+        <li>
+          <ExternalLink href="https://www.dotenv.org/">dotenv</ExternalLink>
+        </li>
         <li>uuid</li>
       </ul>
 
@@ -55,7 +61,12 @@ export function TechStackSection() {
         <li>
           <ExternalLink href="https://www.koyeb.com/">Koyeb</ExternalLink>
         </li>
-        <li>GitHub（ソースコード管理）</li>
+        <li>
+          <ExternalLink href="https://github.com/Kaiser05gg">
+            GitHub
+          </ExternalLink>
+          （ソースコード管理）
+        </li>
         <li>環境変数による設定管理</li>
         <li>ビルド済み JavaScript による本番実行</li>
       </ul>
