@@ -23,7 +23,12 @@ export function DesignSection() {
         <li>投票項目をテンプレートとして定義できること</li>
         <li>毎日決まった時刻に投票を自動で発射できること</li>
         <li>投票項目数を固定（例：5項目）して扱えること</li>
-        <li>投票結果を取得し、保存・参照できること</li>
+        <li>投票結果を取得し、DBに保存・参照できること</li>
+        <li>
+          保存された投票データを Web
+          上のフロントページから一覧・詳細として閲覧できること
+        </li>
+        <li>Web フロントページから過去の投票結果を時系列で確認できること</li>
       </ul>
 
       <h3 className="text-xl font-semibold mb-3">非機能要件</h3>
@@ -33,6 +38,14 @@ export function DesignSection() {
         <li>Bot トークンや設定情報を安全に管理できること</li>
         <li>将来的な機能追加や仕様変更に対応しやすい構成であること</li>
         <li>テスト環境と本番環境を分けて運用できること</li>
+        <li>
+          Firebase への読み書きが失敗した場合でも、Discord Bot
+          の動作が停止しない設計であること
+        </li>
+        <li>
+          Web フロントページは閲覧専用とし、認証情報や Bot
+          トークンがクライアントに露出しないこと
+        </li>
       </ul>
 
       <h3 className="text-xl font-semibold mb-3">設計方針・構成</h3>
