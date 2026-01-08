@@ -67,8 +67,6 @@ export function TechStackSection() {
           </ExternalLink>
           （ソースコード管理）
         </li>
-        <li>環境変数による設定管理</li>
-        <li>ビルド済み JavaScript による本番実行</li>
       </ul>
     </section>
   );
