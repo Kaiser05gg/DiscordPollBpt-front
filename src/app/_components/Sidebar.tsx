@@ -34,6 +34,15 @@ export function Sidebar() {
               投票一覧
             </span>
           </Link>
+          <Link
+            href="/graph"
+            className="flex items-center gap-2 rounded px-3 py-2 hover:bg-gray-700 transition"
+          >
+            <span>📊</span>
+            <span className="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              graph
+            </span>
+          </Link>
 
           <Link
             href="/docs"
