@@ -9,30 +9,33 @@ interface Props {
 }
 
 export function PollDetailCard({ poll }: Props) {
+  const hasValidResults =
+    poll.results &&
+    Object.values(poll.results).some((count) => Number(count) > 0);
+
   return (
     <div className="max-w-2xl mx-auto mt-10 bg-white p-6 rounded-2xl shadow">
       <h1 className="text-2xl font-bold text-gray-900 mb-4">{poll.question}</h1>
-
       <p className="text-sm text-gray-500 mb-2">
         <span className="font-semibold">ID:</span> {poll.id} /
         <span className="font-semibold ml-2">UUID:</span> {poll.uuid}
       </p>
-
       <p className="text-sm text-gray-500 mb-4">
         <span className="font-semibold">作成日時:</span>{" "}
         {poll.created_at ? convertTimestamp(poll.created_at) : "不明"}
       </p>
-
       <h2 className="text-xl font-semibold mt-6 mb-2">結果</h2>
 
-      {poll.results ? (
+      {hasValidResults ? (
         <ul className="space-y-1 mb-6">
-          {Object.entries(poll.results).map(([option, count]) => (
-            <li key={option} className="flex justify-between border-b pb-1">
-              <span>{option}</span>
-              <span className="font-bold">{count}</span>
-            </li>
-          ))}
+          {Object.entries(poll.results!)
+            .filter(([, count]) => Number(count) > 0)
+            .map(([option, count]) => (
+              <li key={option} className="flex justify-between border-b pb-1">
+                <span>{option}</span>
+                <span className="font-bold">{Number(count)}</span>
+              </li>
+            ))}
         </ul>
       ) : (
         <p className="text-gray-500">結果データなし</p>

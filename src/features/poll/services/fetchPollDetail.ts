@@ -10,5 +10,16 @@ export async function fetchPollDetail(id: string): Promise<PollDetail> {
     throw new Error(`Failed to fetch poll detail: ${res.status}`);
   }
 
-  return res.json();
+  const data = await res.json();
+
+  const parsedResults = data.results
+    ? Object.fromEntries(
+        Object.entries(data.results).map(([key, value]) => [key, Number(value)])
+      )
+    : {};
+
+  return {
+    ...data,
+    results: parsedResults,
+  };
 }
